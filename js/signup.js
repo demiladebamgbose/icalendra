@@ -19,6 +19,11 @@ function register(){
         				event: {
         					date:[]
         				}
+        				localStorage.setItem("database",getId('email').value.split('@')[0]);
+						localStorage.setItem('currentUser', getId('fullName').value);
+	                    linkTo('Event.html');
+	     				console.log(localStorage.getItem('database'));
+	     				console.log(localStorage.getItem('currentUser'));
         			});
 
         		}
