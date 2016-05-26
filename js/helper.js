@@ -14,7 +14,7 @@ function rightLen(password){
 }
 
 function isValidData(input){
-	if(input != ''){
+	if(getId(input).value != ''){
 		return true;
 	}
 	return false;
@@ -22,7 +22,7 @@ function isValidData(input){
 
 
 function isEmail(email){
-	if(email.includes('@') && email.includes('.')){
+	if( (getId(email).value.includes('@')) && (getId('email').value.includes('.'))){
 		return true;
 	}
 	return false;
