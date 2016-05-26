@@ -14,7 +14,7 @@ function signin(){
 			var myUserRef = new Firebase('https://icalendra.firebaseio.com/'+ getId('email').value.split('@')[0]);
 			myUserRef.on("value", function(snapshot) {
 				var message = snapshot.val();
-				console.log(message.email);
+				console.log(message.fullName);
 
 				if( (message.email == getId('email').value) && (message.password === getId('password').value)){
 					found = true;
@@ -23,7 +23,7 @@ function signin(){
 						localStorage.setItem('currentUser', message.fullName);
 						console.log(localStorage.getItem('database'));
 	     				console.log(localStorage.getItem('currentUser'));
-	                    linkTo('Event.html');
+	                    linkTo('event.html');
      				}
      				else{
      					getId('msg').innerHTML='Invalid Username or password';

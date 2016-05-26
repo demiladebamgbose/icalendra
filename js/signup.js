@@ -19,13 +19,8 @@ function register(){
         				event: {
         					date:[]
         				}
-        			});
-        			localStorage.setItem("database",getId('email').value.split('@')[0]);
-						localStorage.setItem('currentUser', getId('fullName').value);
-						console.log(localStorage.getItem('database'));
-	     				console.log(localStorage.getItem('currentUser'));
-	                    linkTo('Event.html');
-
+        					
+        				});
 
         		}
         		else{
