@@ -11,7 +11,7 @@ function register(){
 			if(rightLen('password')){
         		if(isValidPassword('password','confirm')){
         			var myUserRef = new Firebase('https://icalendra.firebaseio.com/'+ getId('email').value.split('@')[0]);
-        			console.log( getId('email').value.split('@')[0])
+        			console.log( getId('email').value.split('@')[0]);
         			myUserRef.set({
         				fullName: getId('fullName').value,
         				email: getId('email').value,
@@ -19,12 +19,13 @@ function register(){
         				event: {
         					date:[]
         				}
-        				localStorage.setItem("database",getId('email').value.split('@')[0]);
-						localStorage.setItem('currentUser', getId('fullName').value);
-	                    linkTo('Event.html');
-	     				console.log(localStorage.getItem('database'));
-	     				console.log(localStorage.getItem('currentUser'));
         			});
+        			localStorage.setItem("database",getId('email').value.split('@')[0]);
+						localStorage.setItem('currentUser', getId('fullName').value);
+						console.log(localStorage.getItem('database'));
+	     				console.log(localStorage.getItem('currentUser'));
+	                    linkTo('Event.html');
+
 
         		}
         		else{

@@ -6,6 +6,8 @@ function start(){
 }
 
 function signin(){
+
+	var found;
 	if( (isValidData('email')) && (isValidData('password')) ){
 		if(isEmail('email')){
 			console.log(getId('email').value.split('@')[0] );
@@ -15,12 +17,17 @@ function signin(){
 				console.log(message.email);
 
 				if( (message.email == getId('email').value) && (message.password === getId('password').value)){
-					alert('in');
-					localStorage.setItem("database",getId('email').value.split('@')[0]);
-					localStorage.setItem('currentUser', message.fullName);
-                    linkTo('Event.html');
-     				console.log(localStorage.getItem('database'));
-     				console.log(localStorage.getItem('currentUser'));
+					found = true;
+					if(found){
+						localStorage.setItem("database",getId('email').value.split('@')[0]);
+						localStorage.setItem('currentUser', message.fullName);
+						console.log(localStorage.getItem('database'));
+	     				console.log(localStorage.getItem('currentUser'));
+	                    linkTo('Event.html');
+     				}
+     				else{
+     					getId('msg').innerHTML='Invalid Username or password';
+     				}
 				}
 				else{
         			getId('msg').innerHTML='Invalid Username or password';
