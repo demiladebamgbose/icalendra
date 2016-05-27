@@ -19,16 +19,17 @@ function register(){
         				event: {
         					date:[]
         				}
-        					
+        				
         				});
-
+        				getId('msg').innerHTML='click <a href="login.html"> here</a> to log in';
+        		
         		}
         		else{
         			getId('msg').innerHTML='Passwords do not match';
         		}
 			}
 			else{
-				getId('msg').innerHTML='Password must be at least 7 characters s ';
+				getId('msg').innerHTML='Password must be at least 7 characters ';
 			}
 		}
 		else{
@@ -37,7 +38,7 @@ function register(){
 
 	}
 	else{
-			getId('msg').innerHTML='Invalid Username or password';	
+			getId('msg').innerHTML='Fill all fields';	
 		}
 }
 
