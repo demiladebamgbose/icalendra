@@ -2,6 +2,7 @@
 
 function start(){
 	registerClickEvent('register', register);
+	getId('msg').style.color='red';
 }
 
 
@@ -21,7 +22,8 @@ function register(){
         				}
         				
         				});
-        				getId('msg').innerHTML='click <a href="login.html"> here</a> to log in';
+        				getId('msg').style.color = 'green'; 
+        				getId('msg').innerHTML='Sign up successful. Click <a href="login.html"> here</a> to log in';
         		
         		}
         		else{
