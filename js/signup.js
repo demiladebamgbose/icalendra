@@ -19,21 +19,17 @@ function register(){
         				event: {
         					date:[]
         				}
-        			});
-        			localStorage.setItem("database",getId('email').value.split('@')[0]);
-						localStorage.setItem('currentUser', getId('fullName').value);
-						console.log(localStorage.getItem('database'));
-	     				console.log(localStorage.getItem('currentUser'));
-	                    linkTo('Event.html');
-
-
+        				
+        				});
+        				getId('msg').innerHTML='click <a href="login.html"> here</a> to log in';
+        		
         		}
         		else{
         			getId('msg').innerHTML='Passwords do not match';
         		}
 			}
 			else{
-				getId('msg').innerHTML='Password must be at least 7 characters s ';
+				getId('msg').innerHTML='Password must be at least 7 characters ';
 			}
 		}
 		else{
@@ -42,7 +38,7 @@ function register(){
 
 	}
 	else{
-			getId('msg').innerHTML='Invalid Username or password';	
+			getId('msg').innerHTML='Fill all fields';	
 		}
 }
 

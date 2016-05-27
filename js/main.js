@@ -1,9 +1,10 @@
 
-var http = require('http');
-var express = require('express');
-var httpApp = express();
-httpApp.use(express.static(__dirname ));
-httpApp.get('/', function (req,res){
-    res.sendFile(__dirname + '/' + 'Register.html');
-});
-var webserver = http.createServer(httpApp).listen(8085);
+var sys = require("sys"),
+my_http = require("http"),
+path = require("path"),
+url = require("url"),
+filesys = require("fs");
+my_http.createServer(function(request,response){
+
+	
+}).listen(8085)
