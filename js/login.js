@@ -13,11 +13,6 @@ function signin(){
 		  myUserRef.on("value", function(snapshot) {
 			  var message = snapshot.val();	
 
-			  if(message=== null){
-					getId('msg').innerHTML='Invalid Username or password';
-				  return;
-			  }
-
 			  if( (message.email == getId('email').value) && (message.password === getId('password').value)){
 					localStorage.setItem("database",getId('email').value.split('@')[0]);
 					localStorage.setItem('currentUser', message.fullName);
