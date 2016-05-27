@@ -73,18 +73,19 @@ $(function () {
             }
 
     },
-    eventDrop: function(event, delta, revertFunc) {
-                // alert(event.title + " was dropped on " + event.start.format());
+           eventDrop: function(event, delta, revertFunc) {
 
-                if (!confirm("Are you sure about this change?")) {
-                  revertFunc();
-                 }
-                 else{
-                   reSaveEvent(event.title,event.start.format());
-                 }
+       // alert(event.title + " was dropped on " + event.start.format());
+
+        if (!confirm("Are you sure about this change?")) {
+            revertFunc();
+        }
+        else{
+             reSaveEvent(event.title,event.start.format());
+        }
 
     }
-  });
+        });
          
         
      
