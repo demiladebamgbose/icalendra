@@ -1,5 +1,3 @@
-
-
 function start(){
 	registerClickEvent('register', register);
 	getId('msg').style.color='red';
