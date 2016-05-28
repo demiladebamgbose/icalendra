@@ -2,8 +2,8 @@ function registerClickEvent(id, callback){
 	getId(id).addEventListener('click', callback, false);
 }
 
- function registerDropEvents(id,callback){
-    getId(id).addEventListener('drop',callback,false);
+function registerDropEvents(id,callback){
+	getId(id).addEventListener('drop',callback,false);
 }
 
 function rightLen(password){
@@ -35,7 +35,6 @@ function isValidPassword(password1, password2){
 	}
 	return false;
 }
-
 
 function getId(id){
 	return document.getElementById(id);
