@@ -2,6 +2,7 @@ var array = [];
 var started = false;
 var myUserRef ;
 function init(){
+  getId('logout').style.color='white';
   greet();
   myUserRef  = new Firebase('https://icalendra.firebaseio.com/'+ localStorage.getItem('database'));
   loadItems();   
@@ -36,7 +37,9 @@ function loopThroughItems(obj){
 
 
 function saveEvent(title,date,alldate,bgcss,bdcss){
+  console.log(date);
     var dd = new Date(date._d);
+    console.log(date._d);
     array.push({title:title,start: new Date(dd.getFullYear(),dd.getMonth(),dd.getDate()),backgroundColor:bgcss,borderColor:bdcss});
     
   myUserRef.update({'event':array});
